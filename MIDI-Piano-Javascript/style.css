@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&family=Playwrite+DK+Loopet:wght@100..400&family=Tiny5&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    45deg,
+    #0d1b2a 0%,
+    #1b263b 50%,
+    #415a77 100%
+  ); /* Dark blue gradient */
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Playwrite CU', cursive;
+  color: #f0f0f0;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(6, 176, 176);
+  font-family: "Playwrite CU", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.piano {
+  display: flex;
+  position: relative;
+  z-index: 1; /* Ensure piano keys are on top */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.white {
+  --width: 100px;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+.white.active {
+  background-color: #ccc;
+  transform: translateY(-10px);
+}
+
+.black {
+  --width: 60px;
+  background-color: #000;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+  transform: translateY(-10px);
+}
+
+.note-playing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Playwrite DK Loopet", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  padding-top: 1%;
+  color: white; /* Changed text color to white for better visibility */
+  position: relative;
+  z-index: 1; /* Ensure text is on top */
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
