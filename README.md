@@ -19,7 +19,7 @@ The reason why I did this was, I just wanted to create something that reflects m
 - **HTML5**: For the structure of the webpage.
 - **CSS3**: For styling and creating a visually appealing interface.
 - **JavaScript**: For adding interactivity and handling the piano functionalities.
-- **Netlify**: Deployment and hosting platform.
+- **Netlify**: Deployment and hosting platform. [https://pianopulse.netlify.app/]
 
 
 ## 🚀 How to Use:
